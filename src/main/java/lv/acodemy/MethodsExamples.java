@@ -66,7 +66,7 @@ public class MethodsExamples {
     public static double add(double a, double b) {
         return a + b;
     }
-
+//чтобы не менять значения, когда учеников 100, можно создать метод в main и вызывать его
     public static String calculateGrade(int score) {
         if (score >= 90) {
             return "A";
