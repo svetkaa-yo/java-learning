@@ -14,9 +14,11 @@ My Java-learning Lessons in Intellij IDEA development environment:
 </ul>
 
 ### Keyboard shortcuts:
-Ctrl+Alt+L auto-formatting the selected code or entire file.
-Ctrl+P shows the parameters that the method accepts, along with their types
-Ctrl + D duplicate the current line or selected block of code.
-Ctrl + Y delete the current line.
+<ul>
+<li>Ctrl+Alt+L auto-formatting the selected code or entire file.</li>
+<li>Ctrl+P shows the parameters that the method accepts, along with their types</li>
+<li>Ctrl + D duplicate the current line or selected block of code.</li>
+<li>Ctrl + Y delete the current line.</li>
+</ul>
 
 
