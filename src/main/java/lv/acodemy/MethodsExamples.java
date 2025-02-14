@@ -4,27 +4,25 @@ import org.w3c.dom.ls.LSOutput;
 
 public class MethodsExamples {
     public static void main(String[] args) {
-        //методы=функции, они что-то выполняют или возвращает
+        //methods=functions, they perform a specific task or return something
         //Access modifier: public, private, protected, package-private (default)
-        //void - if not return specific data type
+        //void - if not return specific data type 
         //return - if return
-        // Method name: should be unique in one class, camelCase
+        //Method name: should be unique in one class, camelCase
         //Parameters()
 
         // To create method:
         //[access modifier][other modifiers][return type]methodName{ method body return[value]
         sayHello();
-        // String myName = "Svetlana"; а можно объявить переменную до метода и вставить ее в скобки
-        //так красивее
+        // String myName = "Svetlana"; or declare a variable before the method and insert it into brackets
         greet("Svetlana");
         greet("any name");
         greet("any name");
-        // name от руки не пишем, делаем ctrl+P и сразу в кавычках печатать
-        //пишем кавычки потому что параметр String может быть только в кавычках, это текст
+        
+
         System.out.println(add(30, 60));
-        // если просто  add(30,60); , то подсвечивается желтым - результат игнорируется
-        //со всеми методами, которые что-то возвращают, можно что-то делать, например выводить на экран
-        // или создаем переменную
+        //with all methods that return something, you can do something, for example, display it on the screen
+        // or create a variable
         int x = add(30, 90);
         System.out.println(x);
 
@@ -39,34 +37,32 @@ public class MethodsExamples {
 
     }
 
-    // чтобы написать метод, выходим из метода main
-    //Example: 1.Create method that will print out "Hello, World!"
-    public static void sayHello() { //Чтобы метод работал, нужно вызвать его в методе main, пишем sayHello(); в main
+    // to write a method, exit the main method
+    //Example: 1.Create a method that will print out "Hello, World!"
+    public static void sayHello() { //For the method to work, call it in the main method, write sayHello(); in main
         System.out.println("Hello, World!");
     }
 
-    //2. Создаем метод, который будет приветствовать конкретное имя
-    // Когда будем вызывать метод greet, надо обязательно указывать name
+    //2. Create a method that greet a specific name
+    // When the greet method called, specify name
     public static void greet(String name) {
         System.out.println("Hello, " + name + "!");
     }
 
-    //метод для сложения чисел
-    public static int add(int a, int b) { //в скобках перечисляем, какое кол-во параметров мы хотим,
-        //чтобы этот метод имел
-        int c = a + b; //либо просто return a + b;
+    public static int add(int a, int b) { //in brackets list of parameters required
+        int c = a + b; //or just return a + b;
         return c;
     }
 
-    //нельзя создавать полностью идентичные методы, но можно одно название, разные параметры
-    //method overloading - перегрузка метода, когда можно иметь методы с одинаковым именем, но разными параметрами
-    //public static int add(double a, double b){ если хотим чтобы числа дабл вернулись как инт
-    //return (int)(a+b);
-    //либо
+  //isn't possible create completely identical methods, but with the same name and different parameters
+  //method overloading -  when methods with the same name but different parameters
+  //public static int add(double a, double b){ the double numbers to return as int
+  //return (int)(a+b);
+  //or
     public static double add(double a, double b) {
         return a + b;
     }
-//чтобы не менять значения, когда учеников 100, можно создать метод в main и вызывать его
+ //to avoid changing values ​​when there are many students, create a method in main and call it
     public static String calculateGrade(int score) {
         if (score >= 90) {
             return "A";

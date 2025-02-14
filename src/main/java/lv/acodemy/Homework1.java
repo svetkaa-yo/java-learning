@@ -8,14 +8,14 @@ public class Homework1 {
         // 1.Use a loop to calculate the sum of numbers from 1 to 20.
         for (int i = 1; i < 21; i++) {
             System.out.println(i * (i + 1) / 2);
-        } //используя мат.формулу
-        //или если конечную сумму
-        int result = 0; // создаем переменную,в которой ничего нет, которую будем выводить
+        } //using the math formula
+        //or if the final sum
+        int result = 0; // create a variable that has nothing in it, which will be in output
         for (int i = 1; i < 21; i++) {
             result = result + i;
-        } //каждый раз переменная перезаписывается
+        }//each time the variable is overwritten
         System.out.println("The sum of 1 to 20 = " + result);
-        System.out.println(IntStream.rangeClosed(1, 20).sum()); //создай ряд,поток цифр и просуммируй их, функциональное прогр
+        System.out.println(IntStream.rangeClosed(1, 20).sum()); //a stream of numbers to sum them up, functional programming
         //2.Write a program to print the multiplication table from 1 to 10.
         for (int i = 1; i < 11; i++) {
             System.out.println("Multiple table for " + i);
@@ -23,7 +23,7 @@ public class Homework1 {
                 System.out.println(i + "*" + j + " = " + i * j);
             }
         }
-        //хотела распечатать колонки, но сдалась
+        //I wanted to print the columns, but I didn't finish them
         for (int i = 1; i < 3; i++) {
             System.out.println("Multiple table for " + i);
             for (int k = 1; k < 11; k++) {

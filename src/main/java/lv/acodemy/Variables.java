@@ -2,12 +2,7 @@ package lv.acodemy;
 
 public class Variables {
     public static void main(String[] args) {
-        // this is comment
-        /*
-        this is 1 line
-        this is 2 line
-         */
-
+      
         // int (integer)  = natural number
         int age = 26;
         int currentYear = 2024;
@@ -40,7 +35,7 @@ public class Variables {
         boolean hasAccess = true;
         System.out.println(hasAccess);
         boolean isSummer = false;
-        System.out.println(isSummer); // здесь добавлена невидимая \n
+        System.out.println(isSummer); // println = print new line like \n
 
         System.out.print("Hello World\n");
         System.out.println("Hello World");
@@ -55,7 +50,7 @@ public class Variables {
         //arithmetic operators
         int a = 10;
         int b = 5;
-        int sum = a + b; //можно не ставить пробелы, ctrl+alt+l авт.форматирование
+        int sum = a + b;
         System.out.println(sum);
 
         int c = 20;
@@ -76,21 +71,21 @@ public class Variables {
 
         double num3 = 10.0;
         double num4 = 3.0;
-        double divResult = num3/num4; // название другое потому что переменная такая уже есть выше
-        System.out.println(divResult); //если int int, а деление double, то будет ошибка
+        double divResult = num3/num4; 
+        System.out.println(divResult); //if int/int but result is double, error
 
         // %(remainder of division) остаток деления
         int f = 10;
         int g = 3;
-        int remainder = f % g; // 10= 3*3=9+1, 1 это остаток
+        int remainder = f % g; // 10= 3*3=9+1, 1 is reminder
         System.out.println(remainder);
-        //может использоваться например, чтобы узнать четное число или нет
+        //чтобы узнать четное число или нет
         int number = 8;
-        boolean isEven = (number%2 == 0); // == comparison operator это сравнивание
-        System.out.println(isEven); //ответ тру, делится на два без остатка. а если 9 то фолс
+        boolean isEven = (number%2 == 0); // == comparison operator сравнивание
+        System.out.println(isEven); //true, делится на два без остатка. а если 9 то false
 
-        //increment ++ увеличить значение на 1
-        //Decrement -- уменьшить на 1
+        //increment ++ increase by 1
+        //Decrement -- decrease by 1
         //++preIncrement
         //--decrement
         number ++;
@@ -98,16 +93,14 @@ public class Variables {
         int counter = 10;
         counter ++;
         int postIncrement = counter++;
-        //postIncrement станет 11, а counter 12, потому что вначале назначили
-        //значение переменной, а затем увеличили counter на 1
+        //postIncrement will be 11, counter 12
         int preIncrement = ++counter;
-        //здесь переменная и каунтер будет 13, т.к. мы вначале увеличили а затем назначили
+        //here will be 13,  т.к. мы вначале увеличили а затем назначили
 
-        // можно и несколько операторов
         int r = (a+b)/5;
         System.out.println(r);
 
-        // строка это массив символов
+        // string is symbols array
         String name = "Svetlana";
         String lastName = "Frolova";
         //print them separately
@@ -115,38 +108,35 @@ public class Variables {
         System.out.println(name);
         System.out.println(lastName);
 
-        String fullName = name + " " + lastName; //создаем новую переменную
-        String fullName1 = name + lastName; //тогда напечатается без пробела
+        String fullName = name + " " + lastName;
+        String fullName1 = name + lastName; //in this case without space
         System.out.println(fullName);
         System.out.println(fullName1);
 
-        // %s - for String процент-подставить переменную - интерполяция, после запятой пишем что за переменные
-        // %d - for numbers, разделяется для удобства форматирование например цифр после запятой
+        // %s - for String % insert variable - interpolation, after the comma wich variables
+        // %d - for numbers
         // %b - any type
-        // \n новая строка, непечатаемый символ
-        // printf -тоже самое, что принтлн
-        // println - принимает строку, внутри которой стринг формат и печатает ее
+        // \n new line
+        // printf - like println
+        // println -takes a string with string format and prints it
         System.out.printf("My name is: %s,\n" +
                 "My surname is: %s\n", name, lastName);
         System.out.println(String.format("My name is: %s,\n" +
-                "My surname is: %s\n", name, lastName)); //но джава сама предлагает использовать printf
-        // можно использовать %n или \n для переноса на следующую строку
-        // есть фича var - переменная с неявным типом, который компилятор сможет
-        // определить автоматически
+                "My surname is: %s\n", name, lastName)); 
+        // %n or \n next line
+        // there is a var - a variable with an implicit type that the compiler can
+        // determine automatically
         var myCurrentAge = 30;
         var text = "Hello World";
-        //может быть использован только внутри методов
-        //нельзя использовать для полей класса или параметров методов
-        //мы сейчас пишем внутри метода main, а если выносить переменную на уровень класса, то java не разрешит
-        // можно выносить типизированные переменные
+        //can only be used inside methods
+        //cannot be used for fields or method parameters
+        //we are now writing inside the main method, and if we move the variable to the class level, then java will not allow
+        // is possible to move typed variables
         String myVar;
-        myVar = "Hello, World"; //можно назначатiь значение переменной позже от ее объявления
-        // но в варе так нельзя сделать:
-        // var myVar; myVar = ....
-        // в var необходима инициализация при объявлении и ему нельзя присвоить значение null
-        // относительно потеря читаемости, т.к. другой не поймет явно какой тип данных используется
-        //использовать когда тип переменных явно известен и чтобы сделать код компактнее, например, в списках
-
+        myVar = "Hello, World"; 
+      // var requires initialization when declared and cannot be assigned a null value
+      // relatively loss of readability, since another person will not clearly understand what type of data is used
+      // use when the type of variables is clearly known and to make the code more compact, for example, in lists
 
 
 
